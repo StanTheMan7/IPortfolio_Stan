@@ -25,7 +25,7 @@
   <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
   <!-- Template Main CSS File -->
   <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
-  <link rel="stylesheet" href="{{asset('css/app.css')}}">
+
 
   <!-- =======================================================
   * Template Name: iPortfolio - v1.4.1
@@ -53,7 +53,6 @@
 <script src="{{asset('assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
 <script src="{{asset('assets/vendor/typed.js/typed.min.js')}}"></script>
 <script src="{{asset('assets/vendor/aos/aos.js')}}"></script>
-<script src="{{asset('js/app.js')}}"></script>
 
 <!-- Template Main JS File -->
 <script src="{{asset('assets/js/main.js')}}"></script>
