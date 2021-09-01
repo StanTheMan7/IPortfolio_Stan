@@ -1,4 +1,4 @@
-@extends('template.base')
+@extends('backoffice.homeBack.homeBack')
 
 @section('content')
 <form action="{{route('updateAbout', $dataAbout->id)}}" method="post">

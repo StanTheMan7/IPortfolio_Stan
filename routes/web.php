@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BackOfficeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PortfolioController;
@@ -23,18 +24,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
+// Route pour BackOffice
+
+Route::get('/backoffice', [BackOfficeController::class, 'indexBO'])->name('indexBO');
 // Routes pour toute les create
 
 Route::get('/abouts/create', [AboutController::class, 'createAbout'])->name('createAbout');
 Route::get('/contacts/create', [ContactController::class, 'createContact'])->name('createContact');
-Route::get('/portfolios/create', [PortfolioController::class, 'createPorfolio'])->name('createPortfolio');
+Route::get('/portfolios/create', [PortfolioController::class, 'createPortfolio'])->name('createPortfolio');
 Route::get('/skills/create', [SkillController::class, 'createSkill'])->name('createSkill');
 
 // Routes pour toute les Edits
 
 Route::get('/abouts/{id}/edit', [AboutController::class, 'editAbout'])->name('editAbout');
 Route::get('/contacts/{id}/edit', [ContactController::class, 'editContact'])->name('editContact');
-Route::get('/portfolios/{id}/edit', [PortfolioController::class, 'editPorfolio'])->name('editPortfolio');
+Route::get('/portfolios/{id}/edit', [PortfolioController::class, 'editPortfolio'])->name('editPortfolio');
 Route::get('/skills/{id}/edit', [SkillController::class, 'editSkill'])->name('editSkill');
 
 
@@ -46,10 +50,10 @@ Route::put('/protfolio/{id}/update', [PortfolioController::class, 'updatePortfol
 Route::put('/skills/{id}/update', [SkillController::class, 'updateSkill'])->name('updateSkill');
 // Route pour tout les show 
 
-Route::get('/abouts/{id}/show', [AboutController::class, 'showAbout'])->name('showAbout ');
-Route::get('/contacts/{id}/show', [ContactController::class, 'showContact'])->name('showContact ');
-Route::get('/portfolios/{id}/show', [PortfolioController::class, 'showPortfolio'])->name('showPortfolio ');
-Route::get('/skills/{id}/show', [SkillController::class, 'showSkill'])->name('showSkill ');
+Route::get('/abouts/{id}/show', [AboutController::class, 'showAbout'])->name('showAbout');
+Route::get('/contacts/{id}/show', [ContactController::class, 'showContact'])->name('showContact');
+Route::get('/portfolios/{id}/show', [PortfolioController::class, 'showPortfolio'])->name('showPortfolio');
+Route::get('/skills/{id}/show', [SkillController::class, 'showSkill'])->name('showSkill');
 
 // Route pour les Store
 

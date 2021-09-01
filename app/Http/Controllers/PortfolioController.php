@@ -25,7 +25,7 @@ class PortfolioController extends Controller
 
     public function showPortfolio(Porfolio $id) {
         $dataPortfolio = $id;
-        return view('backoffice.portfolioBack.showPortfolio', compact('showPortfolio'));
+        return view('backoffice.portfolioBack.showPortfolio', compact('dataPortfolio'));
     }
 
     public function storePortfolio(Request $request){

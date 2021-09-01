@@ -8,17 +8,16 @@ use App\Models\Porfolio;
 use App\Models\Skill;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class BackOfficeController extends Controller
 {
-    public function index() {
+    public function indexBO(){
         $dataAbout = About::all();
 
-        $dataSkills= Skill::all();
+        $dataSkills = Skill::all();
 
         $dataPortfolio = Porfolio::all();
 
         $dataContact = Contact::all();
-
-        return view('pages.index', compact('dataAbout', 'dataSkills', 'dataPortfolio', 'dataContact'));
+        return view('pages.indexBO' , compact('dataAbout' , 'dataSkills', 'dataPortfolio', 'dataContact'));
     }
 }

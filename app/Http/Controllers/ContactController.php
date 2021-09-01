@@ -25,7 +25,7 @@ class ContactController extends Controller
 
     public function showContact(Contact $id) {
         $dataContact = $id;
-        return view('backoffice.contactBack.showContact', compact('showContact'));
+        return view('backoffice.contactBack.showContact', compact('dataContact'));
     } 
 
     public function storeContact(Request $request){
@@ -41,12 +41,12 @@ class ContactController extends Controller
         $newEntry->callDesc = $request->callDesc;
         $newEntry->sourceIframe = $request->sourceIframe;
         $newEntry->save();
-        return redirect()->back();
+        return redirect('/backoffice');
     }
      
     public function destroyContact($id) {
-        $data = Contact::find($id);
-        $data->delete();
+        $dataContact = Contact::find($id);
+        $dataContact->delete();
         return redirect('/');
     }
     

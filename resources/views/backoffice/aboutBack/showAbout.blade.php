@@ -1,4 +1,4 @@
-@extends('template.base')
+@extends('backoffice.homeBack.homeBack')
  
 @section('content')
 <div class="card" style="width: 18rem;">
@@ -12,7 +12,7 @@
         <p class="card-text">{{$dataAbout->degree}}</p>
         <p class="card-text">{{$dataAbout->freelance}}</p>
         <p class="card-text">{{$dataAbout->description}}</p>
-    <a class="btn btn-warning" href="{{route('editAbout', $dataAbout->id)}}">Edit</a>
+    <a class="btn btn-warning" href="{{route('editAbout', $dataAbout->id)}}">Edit About</a>
     <form action="{{route('deleteAbout', $dataAbout->id)}}" method="post">
     @csrf
     @method('DELETE')

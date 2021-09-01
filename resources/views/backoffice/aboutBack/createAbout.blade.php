@@ -1,5 +1,5 @@
-@extends('template.base')
- @section('content')
+@extends('backoffice.homeBack.homeBack')
+ @section('content2')
  @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -11,7 +11,8 @@
 @endif
 <form action="{{route('storeAbout')}}" method="post">
 @csrf
-Birthday:<input type="text" name="birthday"value="{{old('birthday')}}" >
+<div class="container d-flex flex-column">
+    Birthday:<input type="text" name="birthday"value="{{old('birthday')}}" >
 Website:<input type="text" name="website" value="{{old('website')}}">
 Phone:<input type="text" name="phone" value="{{old('phone')}}">
 City:<input type="text" name="city" value="{{old('city')}}">
@@ -21,5 +22,6 @@ Email:<input type="text" name="email" value="{{old('email')}}">
 Freelance:<input type="text" name="freelance" value="{{old('freelance')}}">
 Description:<input type="text" name="description" value="{{old('description')}}">
 <button type="submit" class="btn btn-primary">Validate</button>
+</div>
 </form>
  @endsection
